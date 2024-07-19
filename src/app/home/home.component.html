@@ -1,0 +1,28 @@
+<form [formGroup]="form">
+    <h2>country</h2>
+    <button (click)="addCreds()">Add</button>
+  
+    <div
+      formArrayName="countries"
+      *ngFor="let creds of form.controls.countries?.controls; let i = index"
+    >
+      <ng-container [formGroupName]="i">
+        <select
+          class="form-control"
+          formControlName="country"
+          (ngModelChange)="getData($event)"
+          #dataG
+        >
+          <option *ngFor="let data of countryList" [value]="data.id">
+            {{ data.name }}
+          </option>
+        </select>
+        <select class="form-control" formControlName="state">
+          <option *ngFor="let data of stateListGGG" [value]="data?.id">
+            {{ data?.name }}
+          </option>
+        </select>
+      </ng-container>
+    </div>
+  </form>
+          
