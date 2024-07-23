@@ -10,6 +10,19 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     --dark: #0E2E50;
 }
 
+.bg-primary-color {
+    background-color: var(--primary) !important;
+}
+.btn-outline-primary{
+    background-color: var(--primary) !important;
+    border-color:var(--primary) !important; 
+}
+
+.btn-primary{
+    background-color: var(--primary) !important;
+    border-color:var(--primary) !important; 
+
+}
 .back-to-top {
     position: fixed;
     display: none;
