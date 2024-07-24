@@ -1,51 +1,50 @@
-<div class="d-flex justify-content-center">
-  <img src="../../assets/logo.jpg" alt="logo" class="w-25 my-5" />
-</div>
-<div class="d-flex justify-content-center">
-  <div>
-    <h2 class="mb-3">Sign in</h2>
-    <form class="" [formGroup]="LoginForm">
-      <div class="">
-        <mat-form-field appearance="outline">
-          <mat-label>Email</mat-label>
-          <input type="text" matInput formControlName="email" />
-          <mat-error *ngIf="LoginForm.get('email').hasError('required')"
-            >Email is Required!</mat-error
-          >
-        </mat-form-field>
+<div class="d-flex" style="height: 100vh">
+  <div class="d-flex justify-content-end auth-box w-50 align-items-center">
+    <div class="px-5">
+      <img
+        src="../../assets/logo.jpg"
+        alt="logo"
+        class="my-4"
+        style="width: 250px; height: auto"
+      />
+      <h2 class="mb-3">Login</h2>
+      <div class="error" *ngIf="isError" style="text-align: center">
+        username and password is not Valid!!
+      </div>
+
+      <form class="" [formGroup]="LoginForm" (ngSubmit)="Submit()">
+        <div class="">
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-label>Email</mat-label>
+            <input type="text" matInput formControlName="email" />
+            <mat-error *ngIf="f.email?.hasError('required')"
+              >email is not valid!!</mat-error
+            >
+          </mat-form-field>
+          <br />
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-label>Password </mat-label>
+            <input type="password" matInput formControlName="password" />
+            <mat-error *ngIf="f.password?.hasError('required')"
+              >Password is not Valid!!</mat-error
+            >
+          </mat-form-field>
+        </div>
+
+        <button mat-button class="btn btn-primary px-4" type="submit">
+          Login
+        </button>
+
+        <div class="mt-4">Don't have an account?</div>
+        <a [routerLink]="['/signup']">Sign up </a>
         <br />
-        <mat-form-field appearance="outline">
-          <mat-label>Password </mat-label>
-          <input type="password" matInput formControlName="password" />
-          <mat-error *ngIf="LoginForm.get('email').hasError('required')">
-            Password is password
-          </mat-error>
-        </mat-form-field>
-      </div>
-
-      <button mat-button class="btn btn-primary px-4" onclick="submit()">
-        Login
-      </button>
-
-      <div class="mt-4">Don't have an account?</div>
-      <a [routerLink]="['/signup']">Sign up </a>
-
-      <br />
-      <div class="my-5">Or continue with</div>
-      <div class="">
-        <button class="flex-auto" type="button" mat-stroked-button>
-          <i class="fab fa-facebook-f"></i>
-        </button>
-        <button class="flex-auto" type="button" mat-stroked-button>
-          <i class="fab fa-google"></i>
-        </button>
-        <button class="flex-auto" type="button" mat-stroked-button>
-          <i class="fab fa-linkedin-in"></i>
-        </button>
-        <button class="flex-auto" type="button" mat-stroked-button>
-          <i class="fab fa-stack-overflow"></i>
-        </button>
-      </div>
-    </form>
+      </form>
+    </div>
+  </div>
+  <div
+    class="d-flex w-50 bg-color text-white align-items-center flex-column text-left justify-content-center text-center"
+  >
+    <h2>Welcome</h2>
+    <p class="px-5 mt-2">To EstateNexus</p>
   </div>
 </div>

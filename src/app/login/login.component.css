@@ -1,0 +1,10 @@
+.auth-box {
+    width: 400px;
+    margin: 20px auto;
+}
+.bg-color{
+    background-color: #2f65a3;
+}
+.w-100 {
+    width: 100% !important;
+}
