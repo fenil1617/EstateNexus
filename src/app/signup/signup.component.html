@@ -9,37 +9,44 @@
         <mat-form-field appearance="outline">
           <mat-label>First Name</mat-label>
           <input type="text" matInput formControlName="firstname" />
-          <mat-error *ngIf="f.firstname?.hasError('required')">First Name is not valid!!</mat-error>
+          <mat-error *ngIf="f.firstname?.hasError('required')"
+            >First Name is not valid!!</mat-error
+          >
         </mat-form-field>
         <br />
         <mat-form-field appearance="outline">
           <mat-label>Last Name </mat-label>
           <input type="text" matInput formControlName="lastname" />
-          <mat-error *ngIf="f.lastname?.hasError('required')">Last Name is not valid!!</mat-error>
+          <mat-error *ngIf="f.lastname?.hasError('required')"
+            >Last Name is not valid!!</mat-error
+          >
         </mat-form-field>
         <br />
         <mat-form-field appearance="outline">
           <mat-label>email </mat-label>
           <input type="text" matInput formControlName="email" />
-          <mat-error *ngIf="f.email?.hasError('required')">email is not valid!!</mat-error>
-
+          <mat-error *ngIf="f.email?.hasError('required')"
+            >email is not valid!!</mat-error
+          >
         </mat-form-field>
         <br />
         <mat-form-field appearance="outline">
           <mat-label>Password </mat-label>
           <input type="password" matInput formControlName="password" />
-          <mat-error *ngIf="f.password?.hasError('required')">password is not valid!!</mat-error>
+          <mat-error *ngIf="f.password?.hasError('required')"
+            >password is not valid!!</mat-error
+          >
         </mat-form-field>
       </div>
-<br>
+      <br />
       <button mat-button class="btn btn-primary px-4" type="submit">
         SignUp
       </button>
       <br />
       <div class="mt-5 mb-2 text-center">Or continue with</div>
-      <div class="">
-        <button class="flex-auto mx-2" type="button" mat-stroked-button>
-          <i class="fab fa-facebook-f"></i>
+      <!-- <div class="">
+        <button class="flex-auto mx-2" type="button" mat-stroked-button><a href="https://www.google.com/">
+          <i class="fab fa-facebook-f"></i></a>
         </button>
         <button class="flex-auto mx-2" type="button" mat-stroked-button>
           <i class="fab fa-google"></i>
@@ -47,8 +54,21 @@
         <button class="flex-auto mx-2" type="button" mat-stroked-button>
           <i class="fab fa-linkedin-in"></i>
         </button>
+      </div> -->
+      <div class="d-flex pt-2">
+        <a class="btn btn-dark-light btn-social" href="https://www.google.com/"
+          ><i class="fab fa-google"></i
+        ></a>
+        <a class="btn btn-dark-light btn-social" href="https://www.facebook.com/"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+        <a class="btn btn-dark-light btn-social" href="https://www.youtube.com/"
+          ><i class="fab fa-youtube"></i
+        ></a>
+        <a class="btn btn-dark-light btn-social" href="https://in.linkedin.com/"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
       </div>
     </form>
   </div>
 </div>
-
